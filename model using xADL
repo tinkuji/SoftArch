@@ -1,0 +1,16 @@
+xADL - architecture description language
+     - used to describe various aspects of architecture of a software system
+
+common arch constructs:
+1 configurations - topological arrangement of components & connectors
+2 components - loci of computation
+3 connectors - loci of communication
+(loci meaning - a particular position or place where something occurs or is situated)
+
+xADL is an XML based language.
+What to draw?
+1 formal description language (FDL)
+  - purpose, architecture, functionality, data management and security. User experience
+2 box and line diagram
+3 any uml diagram (preferably use case becuase its easy)
+
