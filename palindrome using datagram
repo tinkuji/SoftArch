@@ -1,0 +1,68 @@
+****steps:
+->create java project
+->create two classes (or you can create instances as well)
+->PalSender code
+
+package palin;
+import java.net.*;
+import java.util.*;
+
+public class PalSender {
+	public static void main(String[] args) throws Exception {
+		Scanner scn= new Scanner(System.in);
+		System.out.println("Enter your message: ");
+		String str= scn.nextLine();
+		DatagramSocket ds = new DatagramSocket();
+		InetAddress ip = InetAddress.getByName("127.0.0.1");
+		DatagramPacket dp = new DatagramPacket(str.getBytes(), str.length(), ip, 3000);
+		ds.send(dp);
+		ds.close();
+		System.out.println("Message has been sent to Receiver Class Please Check : "+ str); 
+		}
+}
+
+->PalReceiver code
+
+package palin;
+import java.net.*;
+
+public class PalReceiver {
+	public static void main(String[] args) throws Exception {
+		System.out.println("Waiting for Sender to send the Message");
+		DatagramSocket ds = new DatagramSocket(3000);
+		byte[] buf = new byte[1024];
+		DatagramPacket dp = new DatagramPacket(buf, 1024);
+		ds.receive(dp);
+		String str = new String(dp.getData(), 0, dp.getLength());
+		System.out.println(str);
+		if(isPalindrome(str))
+        {
+            System.out.println(str+" is a palindrome string");
+        }
+        else
+        {
+            System.out.println(str+" is not a palindrome string");
+        }
+    
+		ds.close();
+	}
+	public static boolean isPalindrome(String str) {
+        int left = 0, right = str.length() - 1;
+        
+        while(left < right)
+        {
+            if(str.charAt(left) != str.charAt(right))
+            {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    } 
+		
+}
+
+->run receiver
+->run sender
+->enter string
