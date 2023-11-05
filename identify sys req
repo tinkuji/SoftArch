@@ -1,0 +1,25 @@
+srs document contents
+
+1 introduction
+  -intro
+  - scope of this document
+  - overview
+
+2 general description
+  - product functions
+  - similar system information
+  - user characteristics
+  - user problem statement
+  - user objective
+
+3 functional req
+
+4 interface requirements 
+-GUI descriptions
+- hardware and software (OS Win 7 or up, DNS, etc) (s/w like web browser, or the app)
+- network/communication interfaces (LAN, WAN, router, modem etc)
+
+5 performace requirements
+ (items it will need for the software to run properly like internet, OS Win 7 or up, etc)
+
+6 non-functional req
