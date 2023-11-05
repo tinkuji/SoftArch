@@ -1,0 +1,14 @@
+package string_eq;
+import java.util.Scanner;
+import java.net.*;
+
+public class Simp_Stringeq {
+	public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter a string 1 as an input: ");
+        String input1= scanner.nextLine();
+        System.out.println("Enter a string 2 as an input: ");
+        String input2= scanner.nextLine();
+        System.out.println(input1.equals(input2));
+	}
+}
