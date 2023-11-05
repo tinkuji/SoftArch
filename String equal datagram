@@ -1,0 +1,46 @@
+compares length only
+
+->String_Sender:
+
+package string_eq;
+import java.net.*;
+import java.util.*;
+public class String_Sender {
+	public static void main(String[] args) throws Exception {
+		Scanner scn= new Scanner(System.in);
+		System.out.println("Enter your input 1: ");
+		String str1= scn.nextLine();
+		System.out.println("Enter your input 2: ");
+		String str2= scn.nextLine();
+		DatagramSocket ds = new DatagramSocket();
+		InetAddress ip = InetAddress.getByName("127.0.0.1");
+		DatagramPacket dp1 = new DatagramPacket(str1.getBytes(), str1.length(), ip, 3000);
+		DatagramPacket dp2 = new DatagramPacket(str2.getBytes(), str2.length(), ip, 3000);
+		ds.send(dp1);
+		ds.send(dp2);
+		ds.close();
+		System.out.println("Message has been sent to Receiver Class Please Check : "+ str1+str2); 
+		}
+}
+
+
+->String_Receiver
+
+package string_eq;
+import java.net.*;
+
+public class String_Receiver {
+	public static void main(String[] args) throws Exception {
+		System.out.println("Waiting for Sender to send the Message");
+		DatagramSocket ds = new DatagramSocket(3000);
+		byte[] buf = new byte[1024];
+		DatagramPacket dp1 = new DatagramPacket(buf, 1024);
+		DatagramPacket dp2 = new DatagramPacket(buf, 1024);
+		ds.receive(dp1);
+		ds.receive(dp2);
+		String str1 = new String(dp1.getData(), 0, dp1.getLength());
+		String str2 = new String(dp2.getData(), 0, dp2.getLength());
+
+		System.out.println(str1.equals(str2));
+	}
+}
