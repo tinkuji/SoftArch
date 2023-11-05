@@ -1,0 +1,71 @@
+Experiment No. 9
+
+Aim: Mapping of non-functional components with system requirements
+
+Tools: MS-Word, Creately
+
+Theory:
+
+Mapping non-functional components with system requirements is an essential aspect of designing and developing software systems. Non-functional requirements (NFRs), also known as quality attributes or system qualities, describe how a system should behave rather than what it should do. Non-functional components are the architectural elements or design decisions that address these non-functional requirements. Here's a general process for mapping non-functional components with system requirements:
+
+The following points have been made while considering the project on E-commerce website (Amazon):
+
+1.  Identify Non-Functional Requirements (NFRs): 
+-Scalability
+-Performance
+-Security
+-Availability and Reliability
+-Usability and Accessibility
+-Load Handling and Performance Testing
+-Compliance and Legal Requirements
+-Scalable Database and Data Management
+
+2.  Understand the NFRs: 
+-Scalability: The e-commerce website should be able to handle increased traffic during peak periods (e.g., Black Friday, holiday sales) without performance degradation. It should be scalable to accommodate growing user loads.
+-Performance: The website should load quickly and respond to user interactions without significant delays. Pages, images, and other resources should be optimized for fast loading times.
+-Security: Security is paramount for e-commerce. Non-functional requirements in this category include data encryption (HTTPS), secure payment processing, protection against DDoS attacks, and compliance with industry standards like PCI DSS (Payment Card Industry Data Security Standard).
+-Availability and Reliability: The website must be available 24/7 to maximize sales opportunities. It should have a robust backup and disaster recovery plan to ensure minimal downtime in case of failures.
+-Usability and Accessibility: The website should be user-friendly, providing an intuitive and accessible experience for all users, including those with disabilities. It should conform to WCAG (Web Content Accessibility Guidelines).
+-Load Handling and Performance Testing: Regular load testing should be performed to ensure the website can handle a predefined number of concurrent users and transactions. Performance testing should be conducted to identify bottlenecks and optimize resource usage.
+-Compliance and Legal Requirements: Ensure the e-commerce website complies with relevant legal requirements, including GDPR (General Data Protection Regulation) for handling customer data, and local regulations for e-commerce operations, such as taxation and consumer protection laws.
+-Scalable Database and Data Management: The database system should be able to handle growing amounts of data efficiently. It should provide consistent and accurate information, and data integrity should be maintained. Additionally, there should be data backup and recovery processes in place.
+
+3.  Design Non-Functional Components: 
+-Scalability:
+    -Load Balancing: Implement load balancers to distribute incoming traffic across multiple servers, ensuring even resource utilization.
+    -Caching Mechanisms: Utilize caching systems (e.g., Redis, Memcached) to reduce database load and improve response times.
+-Performance:
+    -Content Delivery Networks (CDNs): Serve static assets (images, stylesheets, JavaScript) through CDNs to reduce latency and speed up page loading.
+    -Content Compression: Implement data compression algorithms like Gzip to reduce the size of transmitted data.
+    -Database Indexing: Use indexing in the database to speed up queries and data retrieval.
+-Security:
+    -Encryption: Implement SSL/TLS for data transmission and at-rest encryption for sensitive data.
+    -Firewalls and Intrusion Detection Systems (IDS): Deploy firewalls and IDS to protect against unauthorized access and attacks.
+    -Security Algorithms: Utilize encryption algorithms (e.g., AES) and hashing algorithms (e.g., bcrypt) for secure data storage and transmission.
+-Availability and Reliability:
+    -Redundancy: Implement redundancy at multiple levels, including servers, databases, and network connections.
+    -High Availability (HA) Clustering: Use technologies like Pacemaker and Corosync for automatic failover and resource management.
+    -Monitoring and Alerting: Set up continuous monitoring and alerting systems to quickly detect and address issues.
+-Usability and Accessibility:
+    -Responsive Web Design: Use responsive design principles to ensure the website adapts to various screen sizes and devices.
+    -Accessible Markup: Employ accessible HTML elements and attributes as per WCAG guidelines.
+    -User Testing: Conduct usability testing with real users to identify and address usability issues.
+-Load Handling and Performance Testing:
+    -Performance Testing Tools: Use tools like JMeter, Apache Benchmark, or LoadRunner to simulate and analyze website performance under varying loads.
+    -A/B Testing: Implement A/B testing to optimize user interfaces and identify the best-performing variations.
+-Compliance and Legal Requirements:
+    -Data Masking and Anonymization: Implement data masking and anonymization techniques to protect customer data while meeting legal requirements.
+    -Audit Trails: Create audit trails and logs to track data access and system changes for compliance purposes.
+-Scalable Database and Data Management:
+    -Sharding: Implement database sharding to horizontally partition data across multiple servers.
+    -NoSQL Databases: Consider using NoSQL databases (e.g., MongoDB, Cassandra) for their scalability and flexible data models.
+    -Database Replication: Set up database replication for data redundancy and read scaling.
+
+4.  Map Components to NFRs: 
+            - scalability----- load testing, caching mechanism
+          - usability / accesibiloity------ reponsive web design, user testing, accesible markup
+user------   - availability/relibility ------accuracy, error tolrenace, redundancy
+          -maintainablity------------- consistency, simplicity, modularity
+            -security---------------encrption, intrusion detection system (IDS), firewall
+
+
