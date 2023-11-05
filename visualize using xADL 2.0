@@ -1,0 +1,24 @@
+Architecture utilisation defines how architectural models are depicted and how stakeholders interact with these depictions
+
+model and visualisation difference
+model- Just abstract information, set of design decision
+visualisation- Give those design decisions form and let us interact with it
+visualisations are often very active Both picture and tools
+
+Kinds of visualisation
+textual, graphical, hybrid
+
+Components of a component diagram
+1 component module 
+  ---------------------
+  |<<component>>   [] |
+  |                   |
+  |  COMPONENT NAME   |
+  ---------------------
+2 connector ___________
+3 interfaces 
+  - required -------c
+  - provided -------o
+  - both are required ------c-----
+  4 data port (small box on any side of the component module)
+    
