@@ -6,7 +6,7 @@
 ->start eclipse->new java web project
 ->install apache 7.0
 ->runtime 2.5
--> if asked to creat 2 seperate instances i.e. of sender side and receiver side, create two seperate packages of the same
+-> if asked to create 2 seperate instances i.e. of sender side and receiver side, create two seperate packages of the same
 -> a sender package and then inside it the DSender class and code
 -> a receiver package and then inside it the DReceiver class and code
 ->enter code DSender
